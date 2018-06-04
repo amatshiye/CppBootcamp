@@ -1,22 +1,31 @@
-FLAGS := -Wall -Werror -Wextra
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/04 07:29:02 by amatshiy          #+#    #+#              #
+#    Updated: 2018/06/04 07:29:19 by amatshiy         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME := megaphone
+
+FLAGS := -Wall -Werror -Wextra
 
 SRC := megaphone.cpp
 
 CMP := clang++
 
 all: to_obj
-	@echo "Compiling files...";
 	$(CMP) -o $(NAME) $(FLAGS) $(NAME).o
-	
+
 to_obj:
-	@echo "Creating objects for no good reason :) ...";
 	$(CMP) -c $(SRC) $(FLAGS)
 
 clean:
-	@echo "Removing object files";
-	rm -rf *.o
+	rm -rf $(NAME).o
 
 fclean: clean
 	rm -rf $(NAME)
