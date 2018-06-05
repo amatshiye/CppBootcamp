@@ -42,17 +42,24 @@ void searchUsers(Phonebook contacts[8])
 {
     //Function to list contacts
     int index;
-    std::cout << "Index | first name | last name | nickname \n";
+    int num = -1;
+    std::cout << "     Index|first name| last name|  nickname\n";
     for (int i = 0; i < 8; i++)
     {
         if (!contacts[i].fname.empty())
         {
-            std::cout << "No. " << i << " | ";
-            std::cout << contacts[i].fname << " | ";
-            std::cout << contacts[i].lname << " | ";
-            std::cout << contacts[i].nickname << " | \n";            
+            num = i;
+            std::cout << std::setw(10);
+            std::cout << i << " |";
+            std::cout << std::setw(10);            
+            std::cout << contacts[i].fname << "| ";
+            std::cout << std::setw(10);                        
+            std::cout << contacts[i].lname << " |";
+            std::cout << std::setw(10);                        
+            std::cout << contacts[i].nickname << "| \n";            
         }
     }
+    std::cout << "Number of arrays: " << num << std::endl;
 
     while (true)
     {
@@ -66,7 +73,21 @@ void searchUsers(Phonebook contacts[8])
         }
         else
         {
-            break;
+            if (num >= 0 && index <= num)
+            {
+                std::cout << "First Name: " << contacts[index].fname << std::endl;
+                std::cout << "Last Name: " << contacts[index].lname << std::endl;
+                std::cout << "Nickname: " << contacts[index].nickname << std::endl;
+                std::cout << "Login: "<< contacts[index].login << std::endl;
+                std::cout << "Number: " << contacts[index].number << std::endl;
+                std::cout << "Postal Address: " << contacts[index].postal << std::endl;
+                std::cout << "Favourite Meal: " << contacts[index].meal << std::endl;
+                std::cout << "Email: " << contacts[index].email << std::endl;
+                std::cout << "Birthday: " << contacts[index].bday << std::endl;
+                std::cout << "Underwear Color: " << contacts[index].ucolor << std::endl;
+                std::cout << "Darkest Secret:" << contacts[index].secret << std::endl;
+                break;
+            }
         }
     }
 }
@@ -87,7 +108,7 @@ int processCMD(std::string cmd, Phonebook contacts[8], int num_c)
 {
     if (cmd == "ADD")
     {
-        if (int x = checkArray(contacts) >= 0)
+        if (checkArray(contacts) >= 0)
         {
             //collect user input
             addUser(contacts, num_c);
@@ -131,8 +152,6 @@ int main(void)
 
     std::cout << "Printing contacts\n";
     std::cout << "First name: " <<  contacts[0].fname << std::endl;
-
-    newPhonebook.printRandom();
 
     return 0;
 }
