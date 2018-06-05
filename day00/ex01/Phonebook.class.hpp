@@ -20,10 +20,6 @@ class Phonebook
         std::string meal; //Meal
         std::string ucolor; //Underwear color
         std::string secret; //Darkest secret
-
-        //Test function. #REMOVE THIS#
-        void printRandom( void );
-
 };
 
 #endif
