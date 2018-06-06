@@ -1,13 +1,18 @@
-#ifndef ZOMBIE_EVENT_H
-#define ZOMBIE_EVENT_H
+#ifndef ZOMBIE_EVENT_HPP
+#define ZOMBIE_EVENT_HPP
 
 #include "Zombie.hpp"
+#include <stdlib.h>
 
-class
+class ZombieEvent
 {
     public:
+        ZombieEvent();
+        ~ZombieEvent();
+
         void setZombieType(std::string type);
         Zombie* newZombie(std::string name);
+        Zombie* randomChump(void);
 
         std::string zombieType;
 };

@@ -1,4 +1,4 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 Zombie::Zombie()
 {
@@ -12,5 +12,5 @@ Zombie::~Zombie()
 
 void Zombie::announce()
 {
-    std::cout << this->name << " " << this->type << " Braiiiiiiiiiiinnnnnns\n";
+    std::cout << name << " " << type << " Braiiiiiiiiiiinnnnnns\n";
 }
