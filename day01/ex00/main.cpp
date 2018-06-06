@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 07:19:29 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/06 07:19:35 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/06 18:14:35 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void ponyOnTheHeap()
 {
     //allocated on the heap
-    Pony* HeapPony = new Pony;
+    Pony* HeapPony = new Pony("red", 4);
     std::cout << "Memory about tp be killed\n";
     delete HeapPony; //Preventing memory leaks
 }
 
 void ponyOnTheStack()
 {
-    Pony StackPony;
+    Pony StackPony("Pink", 10);
     std::cout << "To be killed at run-time\n";
     //allocated on the stack
 }

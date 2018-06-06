@@ -17,9 +17,18 @@
 
 class Pony
 {
+    std::string color;
+    int         weight;
+
     public:
-        Pony();
+        Pony(std::string color, int weight);
         ~Pony();
+
+        std::string getColor();
+        int         getWeight();
+
+        void        setColor(std::string color);
+        void        setWeight(int weight);
 };
 
 #endif

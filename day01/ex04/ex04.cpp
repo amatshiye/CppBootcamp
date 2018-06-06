@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 18:17:54 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/06 18:17:56 by amatshiy         ###   ########.fr       */
+/*   Created: 2018/06/06 17:27:22 by amatshiy          #+#    #+#             */
+/*   Updated: 2018/06/06 17:27:53 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_EVENT_HPP
-#define ZOMBIE_EVENT_HPP
+#include <iostream>
 
-#include "Zombie.hpp"
-#include <cstdlib>
-
-class ZombieEvent
+int main(void)
 {
-    public:
-        ZombieEvent();
-        ~ZombieEvent();
+    std::string brainStr = "HI THIS IS BRAIN";
+    
+    std::string* brainPtr = &brainStr;
+    std::string& brainRef = brainStr;
 
-        void setZombieType(std::string type);
-        Zombie* newZombie(std::string name);
-        Zombie* randomChump(void);
+    std::cout << *brainPtr << std::endl;
+    std::cout << brainRef << std::endl;
 
-        std::string zombieType;
-};
-
-#endif
+    return (0);
+}
