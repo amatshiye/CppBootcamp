@@ -19,9 +19,9 @@ Zombie* ZombieEvent::newZombie(std::string name)
 
 Zombie* ZombieEvent::randomChump(void)
 {
-    std::string zombies[] = {"Eater", "BrainLust", "Devour"};
+    std::string zombies[] = {"Eater", "BrainLust", "Devour", "BrainDead"};
 
-    Zombie* zombie = newZombie(zombies[rand() % 3]);
+    Zombie* zombie = newZombie(zombies[rand() % 4]);
     zombie->announce();
     return (zombie);
 }
