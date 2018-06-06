@@ -2,7 +2,7 @@
 #define ZOMBIE_EVENT_HPP
 
 #include "Zombie.hpp"
-#include <stdlib.h>
+#include <cstdlib>
 
 class ZombieEvent
 {
