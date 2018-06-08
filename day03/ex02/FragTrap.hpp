@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 
-#ifndef __FRAGTRAP_HPP__
-#define __FRAGTRAP_HPP__
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
+#include "ClapTrap.hpp"
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
     private:
         int HitPoints;
@@ -44,7 +44,7 @@ class FragTrap
         void meleeAttack(std::string const & target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        void vaulthunter_dot_exe(std::string const & target);
+        virtual void vaulthunter_dot_exe(std::string const & target);
         void setTarget(std::string target);
         //get Name
         std::string getTarget();

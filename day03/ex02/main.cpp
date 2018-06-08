@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
 int main()
@@ -20,5 +21,14 @@ int main()
     trap_2.vaulthunter_dot_exe("Death Bot X");
     trap_2.rangedAttack("Death Bot X 4");    
     trap_2.takeDamage(15);
+
+    std::cout<< "---------------------------------\n";
+    std::cout<< "Enter Mr Scavy\n";    
+    std::cout<< "---------------------------------\n";
+    ScavTrap scav1;
+    ScavTrap scav("Devour");
+
+    scav.rangedAttack("Human man");
+    scav.challengeNewcomer();
     return (0);
 }

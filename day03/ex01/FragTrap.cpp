@@ -44,7 +44,7 @@ std::string FragTrap::getTarget() { return this->target; }
 void FragTrap::rangedAttack(std::string const & target)
 {
     this->setTarget(target);
-    std::cout << "FR4G-TP " << this->getName() << " attacks " << target << " at range," <<
+    std::cout << "FR4G-TP " << this->name << " attacks " << target << " at range," <<
     "causing " << this->RangeAttack << " points of damage !\n";
     this->takeDamage(this->RangeAttack);
     return;
@@ -54,7 +54,7 @@ void FragTrap::meleeAttack(std::string const & target)
 {
     //melee attack function
     this->setTarget(target);    
-    std::cout << "FR4G-TP " << this->getName() << " attacks " << target << " with a melee attack," <<
+    std::cout << "FR4G-TP " << this->name << " attacks " << target << " with a melee attack," <<
     "causing " << this->MeleeAttack << " points of damage !\n";
     this->takeDamage(this->MeleeAttack);
 
@@ -66,14 +66,14 @@ void FragTrap::takeDamage(unsigned int amount)
     //take damage function
     if (HitPoints >= 30 && amount == 30)
     {
-        std::cout << this->getName() << " got attacked by " << this->getTarget() << std::endl;
-        std::cout << this->getName() << " is left with " << this->HitPoints << " HitPoints\n";        
+        std::cout << this->name << " got attacked by " << this->getTarget() << std::endl;
+        std::cout << this->name << " is left with " << this->HitPoints << " HitPoints\n";        
     }
     else if (HitPoints >= 20 && amount <= 20)
     {
         this->HitPoints = this->HitPoints - amount;
-        std::cout << this->getName() << " got attacked by " << this->getTarget() << std::endl;
-        std::cout << this->getName() << " is left with " << this->HitPoints << " HitPoints\n"; 
+        std::cout << this->name << " got attacked by " << this->getTarget() << std::endl;
+        std::cout << this->name << " is left with " << this->HitPoints << " HitPoints\n"; 
     }
     else
     {
@@ -99,9 +99,8 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
 
     if (this->EnergyPoints >= 25)
     {
-        srand(time(0));
         this->EnergyPoints = this->EnergyPoints - 25;
-        std::cout << "FR4G-TP " << this->getName() << " attacks " << target << " with " << specialAttack[rand() % 5] << 
+        std::cout << "FR4G-TP " << this->name << " attacks " << target << " with " << specialAttack[rand() % 5] << 
         ", causing " << 40 << " points of damage !" << std::endl;
         std::cout << this->getName() << " is left with " << this->EnergyPoints << " Energy Points now\n";
     }
