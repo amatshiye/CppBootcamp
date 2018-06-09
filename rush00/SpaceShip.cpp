@@ -15,9 +15,19 @@
 
 SpaceShip::SpaceShip(void)
 {
+    //init spaceship
+    clear();
+    mvwprintw(this->getWindow(), this->getyMax(), this->getxMax(), "X=X>");
+    refresh();
     return;
 }
+
 SpaceShip::~SpaceShip(void)
 {
     return;
+}
+
+void SpaceShip::showShip()
+{
+    // mvwprintw();
 }

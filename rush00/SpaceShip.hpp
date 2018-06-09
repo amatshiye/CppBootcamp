@@ -24,7 +24,7 @@ class SpaceShip : public RetroGame
         ~SpaceShip(void);
 
         SpaceShip & operator=(SpaceShip const & rhs);
-        void moveShip(int y, int x);
+        void showShip();
 };
 
 #endif

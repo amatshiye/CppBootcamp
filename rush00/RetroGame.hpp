@@ -30,7 +30,6 @@ class RetroGame
         int start_y;
         int start_x;
         WINDOW * win;
-        WINDOW * scoreboard;
     
     public:
         RetroGame(void);
@@ -42,6 +41,9 @@ class RetroGame
         //getters
         int getyMax();
         int getxMax();
+        int getHeight();
+        int getWidth();
+        WINDOW * getWindow();
 };
 
 #endif
