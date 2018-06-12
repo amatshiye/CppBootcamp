@@ -6,7 +6,7 @@
 /*   By: amatshiy <amatshiy@42.FR>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 10:06:07 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/12 12:57:24 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/12 17:32:04 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <exception>
 
 class Scalar
 {
     private:
         std::string  _str;
+        int         _precision;
         
     public:
         Scalar(void);
@@ -31,6 +33,8 @@ class Scalar
         Scalar &operator=(Scalar const &rhs);
         std::string getString();
 
+        int     getPrecision(std::string str);
+        int     checkString(std::string str);
         void    toInt(std::string       str);
         void    toChar(std::string      str);
         void    toFloat(std::string     str);
