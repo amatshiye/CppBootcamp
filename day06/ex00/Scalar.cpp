@@ -6,7 +6,7 @@
 /*   By: amatshiy <amatshiy@42.FR>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 10:08:09 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/12 17:59:03 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/13 18:39:58 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void    Scalar::toInt(std::string str)
 void    Scalar::toFloat(std::string str)
 {
     int pre = getPrecision(str);
-    if (pre > 6)
+    if (pre > std::numeric_limits<float>::digits10)
         pre = 6;
     // float g = stof(str);
     // std::cout << g << std::endl;
@@ -88,7 +88,7 @@ void    Scalar::toFloat(std::string str)
 void    Scalar::toDouble(std::string str)
 {
     int pre = getPrecision(str);
-    if (pre > 15)
+    if (pre > std::numeric_limits<double>::digits10)
         pre = 15;
 
     try
@@ -106,16 +106,6 @@ void    Scalar::toDouble(std::string str)
     } 
 }
 
-int Scalar::checkString(std::string str)
-{
-    for (unsigned int x = 0; x < str.length(); x++)
-    {
-        if ((str[x] != 'f') && !(str.size() > 1) && (isalpha(str[x])))
-            return (1);
-        continue;
-    }
-    return (0);
-}
 
 int Scalar::getPrecision(std::string str)
 {

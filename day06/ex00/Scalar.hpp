@@ -6,7 +6,7 @@
 /*   By: amatshiy <amatshiy@42.FR>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 10:06:07 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/12 17:32:04 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/13 13:24:54 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class Scalar
         std::string getString();
 
         int     getPrecision(std::string str);
-        int     checkString(std::string str);
         void    toInt(std::string       str);
         void    toChar(std::string      str);
         void    toFloat(std::string     str);

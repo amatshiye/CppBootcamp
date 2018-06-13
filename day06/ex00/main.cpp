@@ -6,7 +6,7 @@
 /*   By: amatshiy <amatshiy@42.FR>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 10:07:16 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/12 17:44:38 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/13 18:39:52 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void    _execute(std::string str)
 {
     Scalar s(str);
 
-    std::cout << std::numeric_limits<double>::digits10 << std::endl;
     //std::cout << FLOAT_DIG << std::endl;
     
     s.toChar(s.getString());
