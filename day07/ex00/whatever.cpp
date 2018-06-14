@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   whatever.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amatshiy <amatshiy@42.FR>                  +#+  +:+       +#+        */
+/*   By: amatshiy <amatshiy@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 07:28:51 by amatshiy          #+#    #+#             */
-/*   Updated: 2018/06/14 13:55:01 by amatshiy         ###   ########.fr       */
+/*   Updated: 2018/06/14 16:42:12 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void swap(T & a, T & b)
 template < typename T>
 T const  max(T const & x, T const & y)
 {
-    return (x > y ? x : y);
+    return (x >= y ? x : y);
 }
 
 template < typename T>
 T const  min(T const & a, T const & b)
 {
-    return (a > b ? b : a);
+    return (a <= b ? a : b);
 }
 
 int main(void)
